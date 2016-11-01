@@ -9,6 +9,11 @@
  */
 class MobWeb_MassResetCustomerPasswords_Adminhtml_Massresetcustomerpasswords_IndexController extends Mage_Adminhtml_Controller_Action
 {
+    protected function _isAllowed()
+    {
+        return true;
+    }
+    
     public function indexAction()
     {
         // Get the customer IDs from the request
