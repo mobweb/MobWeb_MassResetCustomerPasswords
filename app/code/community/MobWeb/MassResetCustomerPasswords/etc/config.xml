@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <MobWeb_MassResetCustomerPasswords>
+            <version>0.0.1</version>
+        </MobWeb_MassResetCustomerPasswords>
+    </modules>
+    <global>
+        <helpers>
+            <mobweb_massresetcustomerpasswords>
+                <class>MobWeb_MassResetCustomerPasswords_Helper</class>
+            </mobweb_massresetcustomerpasswords>
+        </helpers>
+        <models>
+            <mobweb_massresetcustomerpasswords>
+                <class>MobWeb_MassResetCustomerPasswords_Model</class>
+            </mobweb_massresetcustomerpasswords>
+        </models>
+    </global>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <mobweb_massresetcustomerpasswords before="Mage_Adminhtml">MobWeb_MassResetCustomerPasswords_Adminhtml</mobweb_massresetcustomerpasswords>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <adminhtml>
+        <events>
+            <core_block_abstract_prepare_layout_before>
+                <observers>
+                    <mobweb_massresetcustomerpasswords_core_block_abstract_prepare_layout_before>
+                        <type>singleton</type>
+                        <class>mobweb_massresetcustomerpasswords/observer</class>
+                        <method>coreBlockAbstractPrepareLayoutBefore</method>
+                    </mobweb_massresetcustomerpasswords_core_block_abstract_prepare_layout_before>
+                </observers>
+            </core_block_abstract_prepare_layout_before>
+        </events>
+    </adminhtml>
+</config>
