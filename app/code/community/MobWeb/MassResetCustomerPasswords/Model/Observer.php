@@ -17,7 +17,7 @@ class MobWeb_MassResetCustomerPasswords_Model_Observer extends Mage_Core_Model_A
         {
             // Add our custom link to the customer mass actions
             $block->addItem('mobweb_massresetcustomerpasswords', array(
-                'label' => 'Send new passwords',
+                'label' => 'Send new password',
                 'url' => $block->getUrl('adminhtml/massresetcustomerpasswords_index')
             ));
         }
