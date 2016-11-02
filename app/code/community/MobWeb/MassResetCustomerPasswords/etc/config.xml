@@ -16,6 +16,14 @@
                 <class>MobWeb_MassResetCustomerPasswords_Model</class>
             </mobweb_massresetcustomerpasswords>
         </models>
+        <resources>
+            <mobweb_massresetcustomerpasswords_setup>
+                <setup>
+                    <module>MobWeb_MassResetCustomerPasswords</module>
+                    <class>Mage_Customer_Model_Entity_Setup</class>
+                </setup>
+            </mobweb_massresetcustomerpasswords_setup>
+        </resources>
     </global>
     <admin>
         <routers>

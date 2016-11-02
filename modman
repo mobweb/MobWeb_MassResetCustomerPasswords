@@ -2,5 +2,7 @@ app/code/community/MobWeb/MassResetCustomerPasswords app/code/community/MobWeb/M
 
 app/etc/modules/MobWeb_MassResetCustomerPasswords.xml app/etc/modules/MobWeb_MassResetCustomerPasswords.xml
 
+shell/mass-reset-customer-passwords.php shell/mass-reset-customer-passwords.php
+
 # Clear the cache
 @shell   rm -rf $PROJECT/var/cache/* && echo "Magento Cache cleared"
