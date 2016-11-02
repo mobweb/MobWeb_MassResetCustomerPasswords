@@ -4,6 +4,14 @@ A simple extension that adds a new link "Send new passwords" to the customer mas
 
 This is useful if you have imported customer accounts from an external source and need to assign them all a custom password and notify them about it.
 
+## Shell scripts
+
+There are two shell scripts included:
+
+- mass-reset-customer-passwords.php allows to batch process customer accounts and assign and send the passwords for a limited amount of accounts. This makes it a bit easier to process a big amount of accounts.
+
+- reset-and-export-customer-passwords.php allows to reset the passwords of all customer accounts and export the account data (gender, first name, last name, email, new password) as a CSV file. This can then be used to send this information to the customers using an external email service (e.g. Mailchimp).
+
 ## Installation
 
 Install using [colinmollenhour/modman](https://github.com/colinmollenhour/modman/).
