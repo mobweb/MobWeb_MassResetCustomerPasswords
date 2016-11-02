@@ -40,7 +40,7 @@ class MobWeb_MassResetCustomerPasswords_Shell extends Mage_Shell_Abstract
         // Load $batch customer accounts that have not been processed yet
         $customers = Mage::getResourceModel('customer/customer_collection')
             ->addAttributeToSelect(array('firstname', 'lastname', $emailSentAttributeCode))
-            ->addAttributeToFilter($emailSentAttributeCode, array('eq' => '1'))
+            ->addAttributeToFilter($emailSentAttributeCode, array('eq' => '0'))
             ->setPage(1, $batch);
 
         // Optionally filter the customers by their email domain
