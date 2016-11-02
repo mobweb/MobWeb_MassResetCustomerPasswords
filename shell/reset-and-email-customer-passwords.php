@@ -58,7 +58,7 @@ class MobWeb_MassResetCustomerPasswords_Shell extends Mage_Shell_Abstract
         foreach ($customers as $customer) {
 
             // Generate the new password
-            $newPassword = $customer->generatePassword();
+            $newPassword = Mage::helper('mobweb_massresetcustomerpasswords/customer')->generatePassword();
             $customer->changePassword($newPassword);
 
             if (!isset($dryRun)) {

@@ -30,7 +30,7 @@ class MobWeb_MassResetCustomerPasswords_Adminhtml_Massresetcustomerpasswords_Ind
             if ($customer && !$customer->isObjectNew()) {
 
                 // Generate and send the new password
-                $newPassword = $customer->generatePassword();
+                $newPassword = Mage::helper('mobweb_massresetcustomerpasswords/customer')->generatePassword();
                 $customer->changePassword($newPassword);
                 $customer->sendPasswordReminderEmail();
 
