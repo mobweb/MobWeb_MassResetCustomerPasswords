@@ -92,13 +92,13 @@ class MobWeb_MassResetCustomerPasswords_Shell extends Mage_Shell_Abstract
         echo "\n";
 
         // Save the $msg in the log
-        Mage::log($msg, NULL, 'mass-reset-customer-passwords.log');
+        Mage::log($msg, NULL, 'reset-and-email-customer-passwords.log');
     }
 
     public function usageHelp()
     {
         return "
-            Usage:  php -f mass-reset-customer-passwords.php.php -- [options]
+            Usage:  php -f reset-and-email-customer-passwords.php -- [options]
 
                 --dryrun  Dry run, don't reset passwords or send emails.
                 --domain <domain>  Only apply to customer accounts with email addreses from the specified domain.
